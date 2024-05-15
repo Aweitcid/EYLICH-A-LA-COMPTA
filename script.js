@@ -134,3 +134,4 @@ function calculateDuration() {
         updateTable(); // Recalculate table after updating duration
     }
 }
+
