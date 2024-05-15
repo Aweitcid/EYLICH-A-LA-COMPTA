@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #321F63;
+    color: #FF00FA;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2A5FD7;
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #2A5FD7;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+tfoot th {
+    background-color: #2A5FD7;
+    color: white;
+}
+
+button {
+    background-color: #2A5FD7;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #FF00FA;
+}
+
+input[type="number"], input[type="time"], input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+input[type="number"]:read-only, input[type="text"]:read-only {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="number"], input[type="time"], input[type="text"] {
+        font-size: 12px;
+    }
+
+    table thead, table tbody, table tfoot, table tr, table td, table th {
+        display: block;
+    }
+
+    table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table tr {
+        border: 1px solid #2A5FD7;
+    }
+
+    table td {
+        border: none;
+        border-bottom: 1px solid #2A5FD7;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        color: #FF00FA;
+        font-weight: bold;
+    }
+
+    tfoot th {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    tfoot th:nth-child(odd) {
+        background-color: transparent;
+        color: #FF00FA;
+    }
+}
